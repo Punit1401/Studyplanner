@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Back Button -->
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"/>
+
+        <!-- Title -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter OTP Code 🔐"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We've sent a one-time password to your email. Enter the code below to verify your identity."
+            android:textColor="#777"
+            android:layout_marginTop="6dp"/>
+
+
+        <!-- OTP BOXES -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/otp1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/otp_box_selector"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:maxLength="1"/>
+
+            <EditText
+                android:id="@+id/otp2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/otp_box_selector"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:maxLength="1"/>
+
+            <EditText
+                android:id="@+id/otp3"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/otp_box_selector"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:maxLength="1"/>
+
+            <EditText
+                android:id="@+id/otp4"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/otp_box_selector"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:maxLength="1"/>
+
+        </LinearLayout>
+
+
+        <!-- RESEND TEXT -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You can resend the code in 5s seconds"
+            android:textColor="#777"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/resendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend code"
+            android:textColor="@color/teal_700"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</ScrollView>

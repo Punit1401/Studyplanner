@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 🔙 Top Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="#000" />
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:text="Add Exam"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <!-- 📦 Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_card_modern"
+        android:elevation="6dp">
+
+        <EditText
+            android:id="@+id/examName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Exam Name"
+            android:padding="12dp"
+            android:background="@drawable/bg_input_modern"/>
+
+        <EditText
+            android:id="@+id/examSubject"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:hint="Subject"
+            android:padding="12dp"
+            android:background="@drawable/bg_input_modern"/>
+
+        <EditText
+            android:id="@+id/examDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:focusable="false"
+            android:hint="Select Date"
+            android:padding="12dp"
+            android:background="@drawable/bg_input_modern"/>
+
+        <!-- 🎯 Priority -->
+        <TextView
+            android:text="Priority"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/priorityGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radioImportant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Important"
+                android:textStyle="bold"
+                android:textColor="#D32F2F"
+                android:buttonTint="#D32F2F"
+                android:layout_marginEnd="20dp"/>
+
+            <RadioButton
+                android:id="@+id/radioNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:textStyle="bold"
+                android:textColor="#F57C00"
+                android:buttonTint="#F57C00"/>
+        </RadioGroup>
+
+        <!-- 🚀 Button -->
+        <Button
+            android:id="@+id/btnAddExam"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text="Save Exam"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button"/>
+    </LinearLayout>
+
+</LinearLayout>
